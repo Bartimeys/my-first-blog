@@ -6,18 +6,20 @@
         <div>
             <h1><a href="">Django Blog</a></h1>
         </div>
-
+{% for post in posts %}
         <div>
 
-            <h2><a href="">My first post</a></h2>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaks }}</p>
             <p>бросай дела бежим скорее<br>
 во двор ловить снежинки ртом<br>
 а то придётся есть с асфальта<br>
 потом<br></p>
 
-<p>published: 02.01.2016</p>
+<p>published: {{ post.published_date }}</p>
+<p>{{ post.text|linebreaks }}</p>
         </div>
-
+{% endfor %}
         <div>
 
             <h2><a href="">My second post</a></h2>

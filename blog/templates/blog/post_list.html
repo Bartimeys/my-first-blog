@@ -6,20 +6,15 @@
         <div>
             <h1><a href="">Django Blog</a></h1>
         </div>
-{% for post in posts %}
         <div>
 
-            <h2><a href="">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaks }}</p>
+            <h2><a href="">My firs post</a></h2>
             <p>бросай дела бежим скорее<br>
 во двор ловить снежинки ртом<br>
 а то придётся есть с асфальта<br>
 потом<br></p>
 
-<p>published: {{ post.published_date }}</p>
-<p>{{ post.text|linebreaks }}</p>
         </div>
-{% endfor %}
         <div>
 
             <h2><a href="">My second post</a></h2>
@@ -36,5 +31,16 @@
               <br> The Higgs-Boson says "But without me how can you have mass?"</p>
 
         </div>
+        <div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
     </body>
 </html>
